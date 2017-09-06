@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:ViewPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TriRanking;assembly=TriRanking" x:Class="TriRanking.RankingAtletiPage" x:TypeArguments="local:Core.RankingAtletiViewModel">
+<Grid>
+<!--    <StackLayout Spacing="5">-->
+    <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <SearchBar x:Name="ricerca" Grid.Row="0" Text="{Binding Ricerca}" TextColor="Black" FontSize="18" BackgroundColor="White" HorizontalTextAlignment="Center" Placeholder="Ricerca atleta o team" Margin="10,10"/>
+    <ListView x:Name="list" Grid.Row="1" ItemsSource="{Binding ListAtleti}" RowHeight="70">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Label Text="{Binding PosizioneClassifica}" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                                    <Label Text="{Binding Atleta}" FontSize="20"/>
+                                    <Label Text="{Binding Societa}" FontSize="14" FontAttributes="Italic" />
+                                </StackLayout>
+                            </Grid>
+                        </Grid>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+<!--    </StackLayout>-->
+<Frame IsVisible="{Binding IsBusy}" Grid.Row="0" Grid.RowSpan="2" BackgroundColor="#80BDBDBD" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+<ActivityIndicator Grid.Row="0" Grid.RowSpan="2" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+</Grid>
+</local:ViewPage>

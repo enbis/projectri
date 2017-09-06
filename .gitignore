@@ -1,0 +1,42 @@
+# Autosave files
+*~
+
+# Build/test output
+obj
+bin
+test-results
+
+# VS sometimes writes these for no apparent reason
+_UpgradeReport_Files
+UpgradeLog.*
+
+# Per-user data
+*.DS_Store
+*.sln.cache
+*.suo
+*.userprefs
+*.usertasks
+*.user
+
+# dotCover
+*.dotCover
+
+# Packages
+/packages/
+!packages/repositories.config
+
+# Xamarin components folder
+/Components/
+
+#Xamarin.Android Resource.designer
+Resources/Resource.designer.cs
+Resource.designer.cs
+Grafica
+iOS/Montaggi.iOS.csproj.bak
+Backend/packages/
+Backend/.vs/config/applicationhost.config
+Backend/MontaggiWS/contents
+Backend/MontaggiWS/localstoragecontents
+Backend/MontaggiWS/site.zip
+ImportService/packages/
+.vs/

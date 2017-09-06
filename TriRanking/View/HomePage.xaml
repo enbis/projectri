@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:ViewPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TriRanking;assembly=TriRanking"
+    x:Class="TriRanking.HomePage"
+    x:TypeArguments="local:Core.HomeViewModel">
+    <ScrollView>
+        <Grid>
+            <Grid Grid.Row="0">
+                <StackLayout Orientation="Vertical" Spacing="10" VerticalOptions="Center">
+                    <Label Text="Anno"/>
+                    <Picker x:Name="pickerAnno" SelectedIndex="{Binding SelectedAnno}" SelectedItem="{Binding SelectedItemAnno}" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackLayout Orientation="Vertical" Spacing="10" VerticalOptions="Center">
+                    <Label Text="Maschile / Femminile"/>
+                    <Picker x:Name="pickerSesso" SelectedIndex="{Binding SelectedSesso}" SelectedItem="{Binding SelectedItemSesso}" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackLayout Orientation="Vertical" Spacing="10" VerticalOptions="Center">
+                    <Label Text="Categoria"/>
+                    <Picker x:Name="pickerCategoria" SelectedIndex="{Binding SelectedCategoria}" SelectedItem="{Binding SelectedItemCategoria}" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="3">
+                <StackLayout Orientation="Vertical" Spacing="10" VerticalOptions="Center">
+                    <Label Text="Tipo di gara"/>
+                    <Picker x:Name="pickerTipoGara" SelectedIndex="{Binding SelectedTipoGara}" SelectedItem="{Binding SelectedItemTipoGara}" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Button Text="Procedi" Command="{Binding Procedi}" VerticalOptions="Start"/>
+            </Grid>
+        </Grid>
+    </ScrollView>
+    
+</local:ViewPage>
