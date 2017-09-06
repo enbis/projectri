@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <local:ViewPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TriRanking;assembly=TriRanking" x:Class="TriRanking.RankingAtletiPage" x:TypeArguments="local:Core.RankingAtletiViewModel">
 <Grid>
-<!--    <StackLayout Spacing="5">-->
     <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"/>
             <RowDefinition Height="*"/>
@@ -32,7 +31,6 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-<!--    </StackLayout>-->
 <Frame IsVisible="{Binding IsBusy}" Grid.Row="0" Grid.RowSpan="2" BackgroundColor="#80BDBDBD" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
 <ActivityIndicator Grid.Row="0" Grid.RowSpan="2" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
 </Grid>
